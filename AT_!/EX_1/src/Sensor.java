@@ -1,20 +1,30 @@
+import java.time.LocalDate;
+
 public class Sensor {
     private String id;
-    private String data;
+    private LocalDate dataColeta;
     private double valorAQI;
 
-    public Sensor(String id, String data, double valorAQI) {
+    public Sensor(String id, LocalDate dataColeta, double valorAQI) {
         this.id = id;
-        this.data = data;
+        this.dataColeta = dataColeta;
         this.valorAQI = valorAQI;
     }
 
-    
-    public String getId() { return id; }
+    public String getId() {
+        return id;
+    }
 
-    
-    public String getData() { return data; }
+    public LocalDate getDataColeta() {
+        return dataColeta;
+    }
 
+    public double getValorAQI() {
+        return valorAQI;
+    }
 
-    public double getValorAQI() { return valorAQI; }
+    @Override
+    public String toString() {
+        return "Sensor ID: " + id + ", Data: " + dataColeta + ", AQI: " + valorAQI;
+    }
 }

@@ -1,3 +1,3 @@
 public interface Emergencia {
-    String classificarNivelEmergencia();
+    String relatorio();
 }
